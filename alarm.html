@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" type="image/png" href="favicon.png">
+        <link rel="icon" type="image/png" href="favicon.png" />
         <link rel="stylesheet" href="style.css" />
         <title>Wake Me Up</title>
     </head>
@@ -17,12 +17,17 @@
         </navigation>
 
         <form class="alarm-container">
-            <label>Set alarm time: </label>
-            <input type="time">
-            <input type="submit" value="Set Alarm">
+            <label>Odd Alarm: </label>
+            <input type="time" id="odd-alarm"/>
+            <label>Even Alarm: </label>
+            <input type="time" id="even-alarm"/>
+            <input type="submit" value="Set Alarm" />
         </form>
 
-        <h2 class="set-alarm">Set Alarm: None</h2>
+        <div class="set-container">
+            <h2 id="set-odd">Set Odd Alarm: None</h2>
+            <h2 id="set-even">Set Even Alarm: None</h2>
+        </div>
         <script src="alarm.js" defer></script>
     </body>
 </html>
