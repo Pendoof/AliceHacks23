@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/png" href="favicon.png">
+        <link rel="stylesheet" href="style.css" />
+        <title>Wake Me Up</title>
+    </head>
+    <body>
+        <navigation id="navigation">
+            <a id="home" href="index.html">Wake Me Up</a>
+            <div id="buttons">
+                <a href="#">Login</a>
+                <a href="alarm.html">Alarm</a>
+            </div>
+        </navigation>
+
+        <div class="clock-container">
+            <div class="clock">
+                <div class="needle hour"></div>
+                <div class="needle minute"></div>
+                <div class="needle second"></div>
+                <div class="center-point"></div>
+            </div>
+
+            <div class="time"></div>
+            <div class="date"></div>
+        </div>
+
+        <form class="alarm-container hidden">
+            <label>Set alarm time: </label>
+            <input type="time" />
+            <input type="submit" value="Set Alarm" />
+        </form>
+
+        <h2 class="set-alarm hidden">Set Alarm: None</h2>
+
+        <script src="script.js" defer></script>
+        <script src="alarm.js" defer></script>
+    </body>
+</html>

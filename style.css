@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css?family=Heebo:300&display=swap");
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #469d89;
+    --secondary-color: #333;
+    --shadow-color: #78c6a3;
+}
+
+html {
+    background-color: #111;
+    color: var(--primary-color);
+}
+
+body {
+    font-family: "Heebo", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+#navigation {
+    border: 5px solid var(--primary-color);
+    border-radius: 20px;
+    box-shadow: 5px 5px var(--shadow-color);
+    padding: 0 50px;
+    display: flex;
+    align-items: center;
+    width: 75%;
+    justify-content: space-between;
+    font-size: 32px;
+    position: absolute;
+    top: 30px;
+}
+
+#home {
+    font-size: 72px;
+}
+
+#buttons {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 24px;
+}
+
+a {
+    text-decoration: none;
+    color: #56ab91;
+    font-weight: bolder;
+}
+
+.clock-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.clock {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+}
+
+.needle {
+    background-color: var(--primary-color);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 65px;
+    width: 3px;
+    transform-origin: bottom center;
+    transition: all 0.5s ease-in;
+}
+
+.needle.hour {
+    transform: translate(-50%, -100%) rotate(0deg);
+}
+
+.needle.minute {
+    transform: translate(-50%, -100%) rotate(0deg);
+    height: 100px;
+}
+
+.needle.second {
+    transform: translate(-50%, -100%) rotate(0deg);
+    height: 100px;
+    background-color: #99e2b4;
+}
+
+.center-point {
+    background-color: #99e2b4;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
+.center-point::after {
+    content: "";
+    background-color: var(--primary-color);
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
+.time {
+    margin-top: 20px;
+    font-size: 60px;
+}
+
+.date {
+    color: #aaa;
+    font-size: 14px;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+.date .circle {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border-radius: 50%;
+    height: 18px;
+    width: 18px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 18px;
+    transition: all 0.5s ease-in;
+    font-size: 12px;
+}
+
+.alarm-container {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 5px solid var(--primary-color);
+    border-radius: 20px;
+    box-shadow: 5px 5px var(--shadow-color);
+}
+
+.alarm-container label {
+    font-size: 32px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.alarm-container input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+.hidden {
+    display: none;
+}
